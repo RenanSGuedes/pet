@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 400px){
+    body {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(125deg, red, purple, blue, violet);
+        background-size: 400% 400%;
+        animation: bgColors 15s infinite;
+    }
+    @font-face {
+        font-family: quickSandBold;
+        src: local(quickSandBold), url("font/quicksand-bold-webfont.woff");
+    }
+    @keyframes bgColors {
+        0% {
+            background-position: 0 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0 50%;
+        }
+    }
+    .container {
+        position: absolute;
+        width: 100%;
+        top: 35%;
+        text-align: center;
+    }
+    a, p {
+        font-family: quickSandBold;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        background: linear-gradient(120deg,rgba(255,0,0,1), rgba(230,0,0,1), rgba(205,0,0,1), rgba(185,0,0,1), rgba(165,0,0,1));
+        background-size: 300% 300%;
+        margin: 4px;
+        border: 2px solid white;
+        border-radius: 10px;
+        transition: color .3s, border-color .3s;
+        animation: bgColorButton 15s infinite;
+    }
+    a:hover {
+        color: yellow;
+        border-color: yellow;
+    }
+    @keyframes bgColorButton {
+        0% {
+            background-position: 0 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0 50%;
+        }
+    }
+    footer {
+        position: absolute;
+        width: 100%;
+        display: grid;
+        text-align: center;
+        bottom: 5px;
+        color: white;
+    }
+}
